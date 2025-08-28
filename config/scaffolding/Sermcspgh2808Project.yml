@@ -8,7 +8,23 @@ packages:
   gitUsername: ArtiKhareIBM
   gitBranch: main
 - name: AddIntsPackage
+  version: "1.0"
   gitServerName: srcCtrl_AzRepos_Arti
   gitUrl: https://dev.azure.com/ArtiKhare/AddIntsPackage/_git
   gitUsername: ArtiKhare
   gitBranch: master
+services:
+- serviceName: project.sermcspgh2808.integrations:azureRepospackage_fs
+  packages:
+  - name: Sermcspgh2808Project
+    version: "1.0"
+  - name: AddIntsPackage
+    version: "1.0"
+- serviceName: AddIntsPackage:addIntsFS
+  packages:
+  - name: AddIntsPackage
+    version: "1.0"
+- serviceName: pub.math:addInts
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2065
